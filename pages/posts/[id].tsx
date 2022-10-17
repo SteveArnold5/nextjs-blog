@@ -5,15 +5,15 @@ import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
-export default function Post({
-  postData
-}: {
+interface PostData {
   postData: {
     title: string
     date: string
     contentHtml: string
   }
-}) {
+}
+
+export default function Post({ postData }: PostData) {
   return (
     <Layout>
       <Head>
